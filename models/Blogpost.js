@@ -24,6 +24,14 @@ Blogpost.init(
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: Sequelize.NOW
+    },
+    user_id: {
+      type: DataTypes.UUID,
+      references: {
+        model: 'user',
+        key: 'id',
+        unique: false
+      }
     }
   },
   {
@@ -34,3 +42,5 @@ Blogpost.init(
     modelName: 'blogpost',
   }
 );
+
+module.exports = Blogpost;
