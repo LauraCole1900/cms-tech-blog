@@ -2,10 +2,46 @@
   --headerFont: "Fredericka the Great", cursive;
   --bodyFont: "Open Sans", sans-serif;
   --ltGray1: #e2e2e2;
+  --ltGray2: #c0c0c0;
   --ltBlue: #c7dbf3;
   --medBlue: #408ae1;
-  --dkGreen: #031105;
+  --dkGreen: #06240b;
   --translucentBgGreen: rgba(3, 17, 5, 0.55);
+}
+
+body {
+  background-color: var(--ltGray1);
+}
+
+.card {
+  margin: 15px;
+  border-radius: 7px;
+}
+
+.card-body {
+  font-family: var(--bodyFont);
+  color: var(--dkGreen);
+  background-color: var(--ltGray2);
+  border-radius: 0 0 7px 7px;
+}
+
+.card-header {
+  font-family: var(--headerFont);
+  background-color: var(--dkGreen);
+  color: var(--ltGray1);
+  border-radius: 7px 7px 0 0 !important;
+}
+.card-header a {
+  color: var(--ltBlue);
+}
+
+.card-header a:hover,
+.navbar a:hover {
+  color: var(--medBlue);
+}
+.card-header a:visited,
+.navbar a:visited {
+  color: var(--ltGray1);
 }
 
 .navbar {
@@ -27,9 +63,9 @@
   color: var(--ltBlue);
   font-family: var(--headerFont);
 }
-:is(.nav-item:hover) {
-  color: var(--medBlue);
-}
-:is(.nav-item:visited) {
-  color: var(--ltGray1);
+
+.title{
+  color: var(--dkGreen);
+  font-family: var(--headerFont);
+  text-align: center;
 }
