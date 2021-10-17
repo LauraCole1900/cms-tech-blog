@@ -21,8 +21,10 @@ body {
 .card-body {
   font-family: var(--bodyFont);
   color: var(--dkGreen);
+  font-size: 16px;
   background-color: var(--ltGray2);
   border-radius: 0 0 7px 7px;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .card-header {
@@ -30,9 +32,11 @@ body {
   background-color: var(--dkGreen);
   color: var(--ltGray1);
   border-radius: 7px 7px 0 0 !important;
+  padding: 1rem 1rem 0.5rem 1rem;
 }
 .card-header a {
   color: var(--ltBlue);
+  font-size: 20px;
 }
 
 .card-header a:hover,
