@@ -6,7 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const allPosts = await Blogpost.findAll({
-      include: [{ model: User }],
+      include: [User],
     });
 
     const posts = allPosts.map(post => post.get({ plain: true }));
@@ -17,6 +17,28 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// GET one post by ID
+router.get('/blog/:id', async (req, res) => {
+  try {
+    const singlePost = await Blogpost.findByPk(req.params.id, {
+      include: [User,
+        {
+          model: Comment,
+          include: User
+        }]
+    })
+    if (singlePost) {
+      const thisPost = singlePost.get({ plain: true });
+      console.log(thisPost);
+      res.render('post', { thisPost });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+})
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
