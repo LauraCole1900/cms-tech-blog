@@ -6,12 +6,13 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     const allPosts = await Blogpost.findAll({
-      include: [User],
+      include: [{ model: User }],
     });
 
     const posts = allPosts.map(post => post.get({ plain: true }));
+    console.log({ posts });
 
-    res.render('homepage', { posts });
+    res.render('lander', { posts });
   } catch (err) {
     res.status(500).json(err);
   }
