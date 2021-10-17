@@ -39,5 +39,5 @@ Blogpost.hasMany(Comment, {
 module.exports = {
   User,
   Blogpost,
-  Comment,
+  Comment
 };
