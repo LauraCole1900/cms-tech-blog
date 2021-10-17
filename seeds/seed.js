@@ -10,19 +10,9 @@ const seedDatabase = async () => {
 
   const users = await User.bulkCreate(userSeedData);
 
-  for (const { id } of users) {
-    const newLicense = await License.create({
-      driver_id: id,
-    });
-  }
+  const posts = await Blogpost.bulkCreate(blogSeedData);
 
-  for (const post of blogSeedData) {
-    const newPost = await Blogpost.create({
-      ...post
-    });
-  }
-
-  for (const comment of commentSeedData) {
+  for (comment of commentSeedData) {
     const newComment = await Comment.create({
       ...comment,
       // Attach a random user ID to each comment
