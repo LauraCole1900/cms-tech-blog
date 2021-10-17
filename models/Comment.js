@@ -22,7 +22,7 @@ Comment.init(
       defaultValue: Sequelize.NOW
     },
     user_id: {
-      type: DataTypes.UUID,
+      type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
