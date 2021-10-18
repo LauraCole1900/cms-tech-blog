@@ -39,13 +39,11 @@ body {
   font-size: 20px;
 }
 
-.card-header a:hover,
-.navbar a:hover {
-  color: var(--medBlue);
-}
-.card-header a:visited,
-.navbar a:visited {
+:is(.card-header, .navbar) a:visited {
   color: var(--ltGray1);
+}
+:is(.card-header, .navbar) a:hover {
+  color: var(--medBlue);
 }
 
 .navbar {
@@ -68,7 +66,7 @@ body {
   font-family: var(--headerFont);
 }
 
-.title{
+.title {
   color: var(--dkGreen);
   font-family: var(--headerFont);
   text-align: center;

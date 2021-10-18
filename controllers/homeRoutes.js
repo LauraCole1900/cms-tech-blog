@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
     });
 
     const posts = allPosts.map(post => post.get({ plain: true }));
-    console.log({ posts });
 
     res.render('lander', { posts });
   } catch (err) {
@@ -30,7 +29,6 @@ router.get('/blog/:id', async (req, res) => {
     })
     if (singlePost) {
       const thisPost = singlePost.get({ plain: true });
-      console.log(thisPost);
       res.render('post', { thisPost });
     } else {
       res.status(404).end();
