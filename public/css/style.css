@@ -5,12 +5,22 @@
   --ltGray2: #c0c0c0;
   --ltBlue: #c7dbf3;
   --medBlue: #408ae1;
+  --ltGreen: #14972a;
+  --medGreen: #0a4614;
   --dkGreen: #06240b;
   --translucentBgGreen: rgba(3, 17, 5, 0.55);
 }
 
 body {
   background-color: var(--ltGray1);
+}
+
+/* div {
+  border: 1px solid red;
+} */
+
+.commentCard {
+  margin-left: 3rem !important;
 }
 
 .card {
@@ -29,14 +39,27 @@ body {
 
 .card-header {
   font-family: var(--headerFont);
-  background-color: var(--dkGreen);
   color: var(--ltGray1);
   border-radius: 7px 7px 0 0 !important;
-  padding: 1rem 1rem 0.5rem 1rem;
 }
 .card-header a {
   color: var(--ltBlue);
   font-size: 20px;
+}
+
+.postCard .card-header {
+  background-color: var(--dkGreen);
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.commentCard .card-header {
+  font-size: 20px;
+  background-color: var(--medGreen);
+  padding: .5rem .5rem .5rem 1rem;
+}
+
+.formCard .card-header {
+  background-color: var(--ltGreen);
 }
 
 :is(.card-header, .navbar) a:visited {
