@@ -1,0 +1,11 @@
+<div class="posts">
+  {{#each posts}}
+    <article class="card postCard">
+      <div class="card-header flex-row justify-space-between">
+        <h2>
+          <a href="/profile/edit/{{id}}">{{formatDate createdAt}} - {{title}}</a>
+        </h2>
+      </div>
+    </article>
+  {{/each}}
+</div>

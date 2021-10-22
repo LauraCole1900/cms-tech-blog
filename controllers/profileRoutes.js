@@ -4,16 +4,16 @@ const withAuth = require('../utils/auth');
 
 // '/profile' stem
 // GET blogposts by signed-in user's ID
-router.get('/', withAuth, async (req, res) => {
-  console.log(req.session);
+// TODO: reincorporate withAuth & user_id: req.session.user_id
+router.get('/', async (req, res) => {
   try {
   const userPosts = await Blogpost.findAll({
     where: {
-      user_id: req.session.user_id
+      user_id: 3
     }
   });
   const posts = userPosts.map(post => post.get({ plain: true }));
-  res.render('user-profile', {
+  res.render('userPosts', {
     layout: 'profile',
     posts
   });

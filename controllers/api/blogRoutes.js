@@ -4,20 +4,19 @@ const router = require('express').Router();
 
 // '/api/blog' stem
 
-// GET blogpost by post ID
-// router.get('/:id', async (req, res) => {
-//   try {
-//     const singlePost = await Blogpost.findByPk(req.params.id,
-//       // {
-//       //   include: [{ model: Comment }, { model: User }]
-//       // }
-//     )
-//     console.log(singlePost);
-//     singlePost ? res.status(200).json(categoryData) : res.status(404).json({ message: `No category found with that ID` });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// })
+// POST new blogpost
+router.post('/', async (req, res) => {
+  try {
+    const newPost = await Blogpost.create({
+      ...req.body,
+      user_id: req.session.user_id
+    })
+    console.log(newPost);
+    res.status(200).json(newPost);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+})
 
 // UPDATE blogpost by post ID
 
