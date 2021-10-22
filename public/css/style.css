@@ -19,12 +19,17 @@ body {
   border: 1px solid red;
 } */
 
-.btn {
+.btn,
+.postBtn {
   font: var(--bodyFont);
   color: var(--ltGray1);
   border-radius: 12px;
   border: 3px solid var(--dkGreen);
   background-color: var(--ltGreen);
+}
+
+.postBtn {
+  margin-left: 15px;
 }
 
 .card {
@@ -58,7 +63,7 @@ body {
 .commentCard .card-header {
   font-size: 20px;
   background-color: var(--medGreen);
-  padding: .5rem .5rem .5rem 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .formCard .card-header {
