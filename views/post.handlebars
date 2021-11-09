@@ -3,7 +3,7 @@
     <div class="card-header flex-row justify-space-between">
       <h2>{{thisPost.title}}</h2>
       <div>
-        {{thisPost.user.user_name}}, 
+        {{thisPost.user.userName}}, 
         {{formatDate thisPost.createdAt}}
       </div>
     </div>
@@ -16,7 +16,7 @@
     {{#each thisPost.comments}}
       <section class="card commentCard">
         <div class="card-header">
-          {{user.user_name}}, {{formatDate createdAt}}
+          {{user.userName}}, {{formatDate createdAt}}
         </div>
 
         <div class="card-body">

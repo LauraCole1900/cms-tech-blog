@@ -4,12 +4,12 @@ const withAuth = require('../utils/auth');
 
 // '/profile' stem
 // GET blogposts by signed-in user's ID
-// TODO: reincorporate withAuth & user_id: req.session.user_id
+// TODO: reincorporate withAuth & userId: req.session.userId
 router.get('/', async (req, res) => {
   try {
   const userPosts = await Blogpost.findAll({
     where: {
-      user_id: 3
+      userId: 3
     }
   });
   const posts = userPosts.map(post => post.get({ plain: true }));

@@ -1,26 +1,26 @@
 [
   {
-    "user_name": "TheTechGod",
+    "userName": "TheTechGod",
     "email": "techgod@test.com",
     "password": "$2a$10$FuRt/eYmrMi2Zgx5UgZfJey9O41ZURsl.yWw4u9UsowaEHinSrE9S"
   },
   {
-    "user_name": "JavaScriptMogul",
+    "userName": "JavaScriptMogul",
     "email": "jsguy@test.com",
     "password": "$2a$10$aLSlaSx9uyknR8o5lVInnuo8OQvNGIlwfm.4MOWvtwqKlwKAaPWsO"
   },
   {
-    "user_name": "WitchOfApplePond",
+    "userName": "WitchOfApplePond",
     "email": "applewitch@test.com",
     "password": "$2a$10$YUjwGjHAmjXDGveUDVJ0i.A5DooVsjDNYGeo.VqAjjgIglQjmS0/i"
   },
   {
-    "user_name": "RegularPerson",
+    "userName": "RegularPerson",
     "email": "jdoe@test.com",
     "password": "$2a$10$ryp7tL6eIbtFAFBnTDaWnOycCoVaSpqHEWnqCE34Luonc5RzGVPve"
   },
   {
-    "user_name": "JustMe",
+    "userName": "JustMe",
     "email": "justme@test.com",
     "password": "$2a$10$sGcCv5Np1J0X7409N3ptxuTD9I4vdjPTe84ON5.f6AaNEjMCdXkum"
   }

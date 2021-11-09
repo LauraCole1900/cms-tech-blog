@@ -2,31 +2,31 @@
   {
     "title": "The Greatest ES Innovation EVAR",
     "content": "The much-anticipated replaceAll method is now live! It's been long discussed, and is now available for every major browser except Internet Explorer (and why are you using IE anyway?)",
-    "user_id": 1
+    "userId": 1
   },
   {
     "title": "Falsy Values in JavaScript",
     "content": "Null, Undefined, Empty string, Zero (0, -0, BigINT0), NaN, False.\nNever. Underestimate. Enemy. Zebras'. Nasty. Farts.",
-    "user_id": 4
+    "userId": 4
   },
   {
     "title": "Breadth or Depth?",
     "content": "I admit, I'm a depth person myself, especially when you're starting out. Depth gives you time with your fundamentals, which gives your code a foundation. You can code successfully for a while without those fundamentals, but eventually, you're going to code yourself into a problem that doesn't make sense ... unless you understand what's going on behind the scenes.",
-    "user_id": 2
+    "userId": 2
   },
   {
     "title": "In Defense of the GeoCities Aesthetic",
     "content": "It's glitzy, it's flashy, it's loud. It looks like a 4-year-old was turned loose to create a website. It's that old GeoCities aesthetic. I admit, it's nothing you want your website to look like now, but it serves its nostalgic purpose: to teach all of us to NEVER DO THAT AGAIN ... unless, of course, you ARE a 4-year-old who was turned loose to create a website.",
-    "user_id": 3
+    "userId": 3
   },
   {
     "title": "Sequelize vs Tedious",
     "content": "... well, which flavor of SQL are you using? Use the tool that goes with it.",
-    "user_id": 4
+    "userId": 4
   },
   {
     "title": "An Ode to My Cat",
     "content": "llllllllllllllllllllllllllllllllllllllllllnjmnjmjmnjmnjmnjmnjmnjmnjmnjmnjmnjmnjmnjmnjm sdsdssdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
-    "user_id": 3
+    "userId": 3
   }
 ]

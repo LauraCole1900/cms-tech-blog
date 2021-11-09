@@ -1,4 +1,4 @@
-// TODO: Remove user_id
+// TODO: Remove userId
 
 const postSubmitHandler = async (e) => {
   e.preventDefault();
@@ -12,7 +12,7 @@ const postSubmitHandler = async (e) => {
     body: JSON.stringify({
       title,
       content,
-      user_id: 3
+      userId: 3
     }),
     headers: { "Content-Type": "application/json" },
   })

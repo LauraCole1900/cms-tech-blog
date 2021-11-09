@@ -21,7 +21,7 @@ Comment.init(
       allowNull: false,
       defaultValue: Sequelize.NOW
     },
-    user_id: {
+    userId: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
@@ -29,7 +29,7 @@ Comment.init(
         unique: false
       }
     },
-    blogpost_id: {
+    blogpostId: {
       type: DataTypes.INTEGER,
       references: {
         model: 'blogpost',
@@ -42,7 +42,7 @@ Comment.init(
     sequelize,
     timestamps: true,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'comment',
   }
 );

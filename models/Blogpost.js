@@ -25,7 +25,7 @@ Blogpost.init(
       allowNull: false,
       defaultValue: Sequelize.NOW
     },
-    user_id: {
+    userId: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
@@ -38,7 +38,7 @@ Blogpost.init(
     sequelize,
     timestamps: true,
     freezeTableName: true,
-    underscored: true,
+    underscored: false,
     modelName: 'blogpost',
   }
 );
