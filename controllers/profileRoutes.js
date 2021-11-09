@@ -22,4 +22,29 @@ router.get('/', async (req, res) => {
 }
 })
 
+
+router.get('/new', (req, res) => {
+  res.render('blog', {
+    layout: 'profile',
+  });
+});
+
+
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const postData = await Blogpost.findByPk(req.params.id);
+    if (postData) {
+      const post = postData.get({ plain: true });
+      res.render('edit', {
+        layout: 'profile',
+        post,
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.redirect('login');
+  }
+});
+
 module.exports = router;
