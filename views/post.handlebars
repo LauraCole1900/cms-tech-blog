@@ -30,14 +30,14 @@
     {{/each}}
   {{/if}}
 
-  <form id="new-comment-form" class="card formCard">
+  <form id="commentForm" class="card formCard">
     <div class="card-header">
       Add New Comment
     </div>
 
     <div class="card-body">
-      <input type="hidden" name="post-id" value="{{thisPost.id}}" />
-      <textarea name="comment-body" placeholder="Write your comment here" class="form-control"></textarea>
+      <input type="hidden" name="post-id" id="postId" value="{{thisPost.id}}" />
+      <textarea name="commentBody" id="commentContent" placeholder="Write your comment here" class="form-control"></textarea>
       <button type="submit" class="btn">Submit</button>
     </div>
   </form>

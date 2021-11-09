@@ -4,8 +4,7 @@ const postSubmitHandler = async (e) => {
   e.preventDefault();
 
   const title = document.getElementById("title").value;
-  const content = document.getElementById("body").value;
-  console.log({ title }, { body })
+  const content = document.getElementById("content").value;
 
   await fetch("/api/blog", {
     method: "POST",
@@ -21,6 +20,4 @@ const postSubmitHandler = async (e) => {
 };
 
 
-document
-  .querySelector("#new-post-form")
-  .addEventListener("submit", postSubmitHandler);
+document.getElementById("#postForm").addEventListener("submit", postSubmitHandler);
