@@ -1,8 +1,8 @@
 const loginHandler = async (e) => {
   e.preventDefault();
 
-  const email = document.getElementById("emailLogin").value;
-  const password = document.getElementById("passwordLogin").value;
+  const email = document.getElementById("emailLogin").value.trim();
+  const password = document.getElementById("passwordLogin").value.trim();
 
   if (email && password) {
     const login = await fetch("/api/user/login", {
