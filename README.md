@@ -20,21 +20,18 @@ This is a blogging app. The user can create posts, comment on posts, and view po
 
 ## Links
 
-[Deployed application on Heroku](https://#.herokuapp.com/) COMING SOON
+[Deployed application on Heroku](https://tech-blog-exercise.herokuapp.com/)
 
 ## Screenshots
 
 Landing page:
-![Landing page:](./public/assets/img/#.png)
+![Landing page:](./assets/landing-page-screenshot.png)
 
 Blog post form:
-![Blog post form](./public/assets/img/#.png)
-
-Comments form:
-![Comments form](./public/assets/img/#.png)
+![Blog post form](./assets/new-post-form-screenshot.png)
 
 Blog post with comments:
-![Post with comments](./public/assets/img/#.png)
+![Post with comments](./assets/post-with-comments-screenshot.png)
 
 ## Installation Instructions
 
