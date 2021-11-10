@@ -20,5 +20,4 @@ const postSubmitHandler = async (e) => {
   }
 };
 
-
 document.getElementById("postForm").addEventListener("submit", postSubmitHandler);

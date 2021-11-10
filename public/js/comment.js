@@ -1,4 +1,4 @@
-// TODO: Remove userId when Auth works, add UI form validation
+// TODO: add UI form validation
 const commentSubmitHandler = async (e) => {
   e.preventDefault();
 
@@ -11,8 +11,7 @@ const commentSubmitHandler = async (e) => {
       method: "POST",
       body: JSON.stringify({
         blogpostId,
-        content,
-        userId: 3
+        content
       }),
       headers: { "Content-Type": "application/json" }
     });

@@ -22,14 +22,14 @@ router.get("/", withAuth, async (req, res) => {
 })
 
 
-router.get("/new_post", (req, res) => {
+router.get("/new_post", withAuth, (req, res) => {
   res.render("blogForm", {
     layout: "profile",
   });
 });
 
 
-router.get("/edit/:id", async (req, res) => {
+router.get("/edit/:id", withAuth, async (req, res) => {
   try {
     const postData = await Blogpost.findByPk(req.params.id);
     if (postData) {

@@ -1,4 +1,4 @@
-// TODO: Remove userId; add UI form validation
+// TODO: add UI form validation
 const postId = document.getElementById("postId").value;
 
 const postUpdateHandler = async (e) => {
@@ -12,8 +12,7 @@ const postUpdateHandler = async (e) => {
       method: "PUT",
       body: JSON.stringify({
         title,
-        content,
-        userId: 3
+        content
       }),
       headers: {
         "Content-Type": "application/json"
