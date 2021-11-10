@@ -10,7 +10,10 @@ router.get("/", async (req, res) => {
 
     const posts = allPosts.map(post => post.get({ plain: true }));
 
-    res.render("lander", { posts });
+    res.render("lander", {
+      posts,
+      loggedIn: req.session.loggedIn
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -28,7 +31,10 @@ router.get("/blog/:id", async (req, res) => {
     })
     if (singlePost) {
       const thisPost = singlePost.get({ plain: true });
-      res.render("post", { thisPost });
+      res.render("post", {
+        thisPost,
+        loggedIn: req.session.loggedIn
+      });
     } else {
       res.status(404).end();
     }
