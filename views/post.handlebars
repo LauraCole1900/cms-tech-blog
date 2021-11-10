@@ -30,17 +30,19 @@
     {{/each}}
   {{/if}}
 
-  <form id="commentForm" class="card formCard">
-    <div class="card-header">
-      Add New Comment
-    </div>
+  {{#if loggedIn}}
+   <form id="commentForm" class="card formCard">
+      <div class="card-header">
+        Add New Comment
+      </div>
 
-    <div class="card-body">
-      <input type="hidden" name="post-id" id="postId" value="{{thisPost.id}}" />
-      <textarea name="commentBody" id="commentContent" placeholder="Write your comment here" class="form-control"></textarea>
-      <button type="submit" class="btn">Submit</button>
-    </div>
-  </form>
+      <div class="card-body">
+        <input type="hidden" name="post-id" id="postId" value="{{thisPost.id}}" />
+        <textarea name="commentBody" id="commentContent" placeholder="Write your comment here" class="form-control"></textarea>
+        <button type="submit" class="btn">Submit</button>
+      </div>
+    </form>
+  {{/if}}
 </div>
 
 <script src="/js/comment.js"></script>
