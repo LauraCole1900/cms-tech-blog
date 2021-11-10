@@ -30,24 +30,24 @@
 // WHEN I click on the button to add a new blog post
 // THEN I am prompted to enter both a title and contents for my blog post
 // WHEN I click on the button to create a new blog post
-// TODO: TEST UPDATE WHEN AUTH WORKS the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
+// TODO: TEST UPDATE WHEN AUTH WORKS THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
 // WHEN I click on one of my existing posts in the dashboard
-// TODO: THEN I am able to delete or update my post and taken back to an updated dashboard
+// TODO: TEST DELETE WHEN AUTH WORKS THEN I am able to delete or update my post and taken back to an updated dashboard
 // TODO: WHEN I click on the logout option in the navigation
 // THEN I am signed out of the site
 // TODO: WHEN I am idle on the site for more than a set time
 // THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
 
-const path = require('path');
-const express = require('express');
-const session = require('express-session');
-const exphbs = require('express-handlebars');
-const routes = require('./controllers');
-const helpers = require('./utils/helpers');
+const path = require("path");
+const express = require("express");
+const session = require("express-session");
+const exphbs = require("express-handlebars");
+const routes = require("./controllers");
+const helpers = require("./utils/helpers");
 
-const sequelize = require('./config/connection');
-const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const sequelize = require("./config/connection");
+const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3005;
@@ -55,7 +55,7 @@ const PORT = process.env.PORT || 3005;
 const hbs = exphbs.create({ helpers });
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: "Super secret secret",
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -66,12 +66,12 @@ const sess = {
 
 app.use(session(sess));
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
+app.engine("handlebars", hbs.engine);
+app.set("view engine", "handlebars");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 

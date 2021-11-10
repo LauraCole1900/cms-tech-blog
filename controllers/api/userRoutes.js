@@ -1,10 +1,10 @@
-const router = require('express').Router();
-const { Blogpost, Comment, User } = require('../../models');
+const router = require("express").Router();
+const { Blogpost, Comment, User } = require("../../models");
 
-// 'api/user stem
+// "/api/user" stem
 
 // GET one user by ID
-router.get('/:id', async (req, res) => {
+router.get("/:id", async (req, res) => {
   try {
     const user = await User.findByPk(req.params.id);
     if (user) {

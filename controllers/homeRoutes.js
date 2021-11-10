@@ -1,9 +1,9 @@
-const router = require('express').Router();
-const { Blogpost, Comment, User } = require('../models');
-const withAuth = require('../utils/auth');
+const router = require("express").Router();
+const { Blogpost, Comment, User } = require("../models");
+const withAuth = require("../utils/auth");
 
 // GET all posts
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const allPosts = await Blogpost.findAll({
       include: [User],
@@ -11,14 +11,14 @@ router.get('/', async (req, res) => {
 
     const posts = allPosts.map(post => post.get({ plain: true }));
 
-    res.render('lander', { posts });
+    res.render("lander", { posts });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 // GET one post by ID
-router.get('/blog/:id', async (req, res) => {
+router.get("/blog/:id", async (req, res) => {
   try {
     const singlePost = await Blogpost.findByPk(req.params.id, {
       include: [User,
@@ -29,7 +29,7 @@ router.get('/blog/:id', async (req, res) => {
     })
     if (singlePost) {
       const thisPost = singlePost.get({ plain: true });
-      res.render('post', { thisPost });
+      res.render("post", { thisPost });
     } else {
       res.status(404).end();
     }
@@ -38,13 +38,13 @@ router.get('/blog/:id', async (req, res) => {
   }
 })
 
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
