@@ -5,7 +5,7 @@ const { Blogpost, Comment, User } = require("../models");
 router.get("/", async (req, res) => {
   try {
     const allPosts = await Blogpost.findAll({
-      include: [User],
+      include: [User]
     });
 
     const posts = allPosts.map(post => post.get({ plain: true }));

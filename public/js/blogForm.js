@@ -13,7 +13,7 @@ const postSubmitHandler = async (e) => {
         title,
         content
       }),
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" }
     })
 
     document.location.replace("/profile");

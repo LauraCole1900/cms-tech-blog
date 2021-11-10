@@ -3,7 +3,7 @@ const postId = document.getElementById("postId").value;
 
 const postUpdateHandler = async (e) => {
   e.preventDefault();
-  
+
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
 
@@ -14,9 +14,7 @@ const postUpdateHandler = async (e) => {
         title,
         content
       }),
-      headers: {
-        "Content-Type": "application/json"
-      }
+      headers: { "Content-Type": "application/json" }
     })
 
     document.location.replace("/profile");
