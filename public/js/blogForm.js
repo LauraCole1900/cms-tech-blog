@@ -1,4 +1,4 @@
-// TODO: Remove userId; add UI form validation
+// TODO: add UI form validation
 
 const postSubmitHandler = async (e) => {
   e.preventDefault();
@@ -11,8 +11,7 @@ const postSubmitHandler = async (e) => {
       method: "POST",
       body: JSON.stringify({
         title,
-        content,
-        userId: 3
+        content
       }),
       headers: { "Content-Type": "application/json" },
     })
@@ -22,4 +21,4 @@ const postSubmitHandler = async (e) => {
 };
 
 
-document.getElementById("#postForm").addEventListener("submit", postSubmitHandler);
+document.getElementById("postForm").addEventListener("submit", postSubmitHandler);

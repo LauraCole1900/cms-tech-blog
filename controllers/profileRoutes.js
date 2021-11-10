@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 
 
 router.get('/new', (req, res) => {
-  res.render('blog', {
+  res.render('blogForm', {
     layout: 'profile',
   });
 });

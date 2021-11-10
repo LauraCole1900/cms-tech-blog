@@ -5,11 +5,11 @@ const withAuth = require("../../utils/auth");
 // '/api/blog' stem
 
 // POST new blogpost
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newPost = await Blogpost.create({
       ...req.body,
-      userId: req.session.userId
+      userId: 3
     })
     console.log(newPost);
     res.status(200).json(newPost);
@@ -18,8 +18,9 @@ router.post('/', withAuth, async (req, res) => {
   }
 })
 
+
 // UPDATE blogpost by post ID
-router.put("/:id", async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   try {
     const updateData = await Blogpost.update(req.body, {
       where: {
@@ -34,6 +35,25 @@ router.put("/:id", async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
-})
+});
+
+
+// DELETE blogpost by post ID
+router.delete("/:id", async (req, res) => {
+  try {
+    const deleteData = Blogpost.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
+    if (deleteData) {
+      res.status(200).end();
+    } else {
+      res.status(404).end();
+    }
+  } catch (err) {
+    res.status(500).json(err)
+  }
+});
 
 module.exports = router;

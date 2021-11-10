@@ -26,7 +26,6 @@ const postUpdateHandler = async (e) => {
 
 
 const postDeleteHandler = async () => {
-
   await fetch(`/api/blog/${postId}`, {
     method: "DELETE"
   });
@@ -35,4 +34,4 @@ const postDeleteHandler = async () => {
 }
 
 document.getElementById("editForm").addEventListener("submit", postUpdateHandler);
-document.getElementById("delete").addEventListener("submit", postDeleteHandler);
+document.getElementById("delete").addEventListener("click", postDeleteHandler);
